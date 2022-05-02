@@ -1,6 +1,6 @@
 ---
 title: 书单与影单
-tags: ["LIst"]
+tags: ["List"]
 excerpt: Books I've read and films I've seen.
 date: 2022-04-30
 ---
