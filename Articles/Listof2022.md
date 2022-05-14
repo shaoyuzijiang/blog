@@ -1,5 +1,5 @@
 ---
-title: 书单与影单
+title: 2022的书单与影单
 tags: ["List"]
 excerpt: Books I've read and films I've seen.
 date: 2022-04-30
@@ -27,6 +27,11 @@ date: 2022-04-30
 	- 关键词：谜语人 侦探 黑暗
 	- 感悟：比起大本和贝尔版本的BATMAN,这次明显感觉到多了一些侦探元素，一些推理虽然不需要脑子，但至少是在解密一个案件，比高科技蝙蝠侠要好一点，这也是最原汁原味的版本吧。还有，罗伯特帕丁森真帅！！！
 
+- 《Fantastic Beasts: The Secrets of Dumbledore》
+	- 我是小雀斑和神奇动物的粉丝，虽然是爆米花电影，不解释！
+
+- 《Doctor Strange in the Multiverse of Madness》
+	- 我是卷福的粉丝，爆米花电影，不解释！
 ## 书单
 ### March
 + 《半泽直树》（前四部）
