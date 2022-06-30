@@ -1,8 +1,8 @@
 ---
 title: The Story of June
 tags:["Summary"]
-excerpt:It's a story of June.
-date:2022-06-30
+excerpt: It's a story of June.
+date: 2022-06-30
 ---
 
 > Well, it is a mixture with luck and sadness.
