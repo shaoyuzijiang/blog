@@ -1,5 +1,5 @@
 ---
-title:Vue3 001
+title: Vue3 001
 tags: ["tutorial"]
 excerpt:Vue3 001
 date: 2022-07-15
