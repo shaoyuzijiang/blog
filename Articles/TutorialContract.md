@@ -1,10 +1,9 @@
 ---
 title: Smart Contract Tutorial 001
-tags:["tutorial"]
-excerpt:Four steps to deploy your blockchain with contract
+tags: ["tutorial"]
+excerpt: 哪个男孩不想拥有属于自己的合约呢？
 date: 2022-07-15
 ---
-
 
 ## Four steps to deploy your blockchain with contract
 
@@ -521,6 +520,7 @@ npx hardhat run scripts/run.js
 	+ We need to deploy it again.
 	+ We need to update the contract address on our frontend. Change contractAddress in App.js to be the new contract address we got from the step above in the terminal .
 	+ We need to update the abi file on our frontend. 
+
 - Update to deploy.js
 ```javascript
 const main = async () => {
@@ -536,6 +536,7 @@ const main = async () => {
 const runMain = async () => {};
 runMain();
 ```
+
 ```
 npx hardhat run scripts/deploy.js --network rinkeby
 ```
