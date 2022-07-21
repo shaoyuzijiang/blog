@@ -6,7 +6,7 @@ date: 2022-07-15
 ---
 
 
-
+- 生命周期
 ```javascript
 // 所有使用的钩子都要引入
 import { 
@@ -67,7 +67,10 @@ export default {
     }
 }
 
+```
 
+Composition API
+```javascript
 
 import { ref, toRefs, reactive }  from 'vue'
 export default {
@@ -299,6 +302,10 @@ export default {
    // 所以倒回去，是不是觉得还不如直接用props.name直接访问代理对象的值要好点
    console.log(props.name, props.age)
 
+```
+
+- argument
+```javascript
    // context 
    // 看到这个context的参数你应该知其意了撒
    //  attrs: 相当于vue2.0的$attrs,意思就是传进来的属性值除了props接受的那部分
