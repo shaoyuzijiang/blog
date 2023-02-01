@@ -1,0 +1,175 @@
+{
+  "main": {
+    "id": "442f28edd2f158a1",
+    "type": "split",
+    "children": [
+      {
+        "id": "77d081573147e1d1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "658d2c69e26d757b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Articles/2023-01-新年的第一份月报.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4908dd0070e947a6",
+    "type": "split",
+    "children": [
+      {
+        "id": "dd9f8be14941bb47",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "213e7e4c2a24acc3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2ff3e77bfdf5ffb6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5e0ae60f7d1f181c",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "b475c3e195af6620",
+    "type": "split",
+    "children": [
+      {
+        "id": "ccaa1293dd0c5c17",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7fc9ea63e156bc4f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Articles/2023-01-新年的第一份月报.md"
+              }
+            }
+          },
+          {
+            "id": "bee685e7c3f32f9b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false
+              }
+            }
+          },
+          {
+            "id": "c91346d327eb9670",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Articles/2023-01-新年的第一份月报.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "85a64ce43d954df3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Articles/2023-01-新年的第一份月报.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "e784020a9e294321",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5a07ef6a6adde5ab",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 271.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "command-palette:打开命令面板": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "658d2c69e26d757b",
+  "lastOpenFiles": [
+    "Articles/Summary of August.md",
+    "Articles/2023-01-新年的第一份月报.md",
+    "English/海外剑10.md",
+    "English/Task 2.md",
+    "English/Part2.md",
+    "Calender/2023-01-17.md",
+    "Calender/2023-01-16.md",
+    "BookNotes/Dapp-learning/5ETHERS.md",
+    "BookNotes/Dapp-learning/123+4truffle.md",
+    "Calender/2023-01-12.md"
+  ]
+}

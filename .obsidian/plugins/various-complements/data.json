@@ -1,0 +1,195 @@
+{
+  "strategy": "default",
+  "matchStrategy": "prefix",
+  "maxNumberOfSuggestions": 5,
+  "maxNumberOfWordsAsPhrase": 3,
+  "minNumberOfCharactersTriggered": 0,
+  "minNumberOfWordsTriggeredPhrase": 1,
+  "complementAutomatically": true,
+  "delayMilliSeconds": 0,
+  "disableSuggestionsDuringImeOn": false,
+  "insertAfterCompletion": true,
+  "firstCharactersDisableSuggestions": ":/^",
+  "showMatchStrategy": true,
+  "showComplementAutomatically": true,
+  "showIndexingStatus": true,
+  "descriptionOnSuggestion": "Short",
+  "selectSuggestionKeys": "Enter",
+  "additionalCycleThroughSuggestionsKeys": "None",
+  "disableUpDownKeysForCycleThroughSuggestionsKeys": false,
+  "openSourceFileKey": "None",
+  "propagateEsc": false,
+  "enableCurrentFileComplement": true,
+  "currentFileMinNumberOfCharacters": 0,
+  "onlyComplementEnglishOnCurrentFileComplement": false,
+  "enableCurrentVaultComplement": false,
+  "currentVaultMinNumberOfCharacters": 0,
+  "includeCurrentVaultPathPrefixPatterns": "",
+  "excludeCurrentVaultPathPrefixPatterns": "",
+  "includeCurrentVaultOnlyFilesUnderCurrentDirectory": false,
+  "enableCustomDictionaryComplement": false,
+  "customDictionaryPaths": "https://raw.githubusercontent.com/first20hours/google-10000-english/master/google-10000-english-no-swears.txt",
+  "columnDelimiter": "Tab",
+  "customDictionaryWordRegexPattern": "",
+  "delimiterToHideSuggestion": "",
+  "delimiterToDivideSuggestionsForDisplayFromInsertion": "",
+  "caretLocationSymbolAfterComplement": "",
+  "displayedTextSuffix": " => ...",
+  "enableInternalLinkComplement": true,
+  "suggestInternalLinkWithAlias": false,
+  "excludeInternalLinkPathPrefixPatterns": "",
+  "enableFrontMatterComplement": true,
+  "frontMatterComplementMatchStrategy": "inherit",
+  "insertCommaAfterFrontMatterCompletion": false,
+  "intelligentSuggestionPrioritization": {
+    "maxDaysToKeepHistory": 30,
+    "maxNumberOfHistoryToKeep": 0
+  },
+  "showLogAboutPerformanceInConsole": false,
+  "selectionHistoryTree": {
+    "const": {
+      "const": {
+        "currentFile": {
+          "count": 2,
+          "lastUpdated": 1673857622000
+        }
+      }
+    },
+    "provider": {
+      "provider": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1673857509954
+        }
+      }
+    },
+    "abiWETH": {
+      "abiWETH": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1673857527484
+        }
+      }
+    },
+    "addressWETH": {
+      "addressWETH": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1673857618952
+        }
+      }
+    },
+    "contract": {
+      "contract": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1673857627470
+        }
+      }
+    },
+    "about": {
+      "about": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1673869146683
+        }
+      }
+    },
+    "because": {
+      "because": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1673870118031
+        }
+      }
+    },
+    "spring": {
+      "spring": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1673870226186
+        }
+      }
+    },
+    "festival": {
+      "festival": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1673870228508
+        }
+      }
+    },
+    "interesting": {
+      "interesting": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1673870832085
+        }
+      }
+    },
+    "difficult": {
+      "difficult": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1673872375663
+        }
+      }
+    },
+    "years": {
+      "years": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1673873319804
+        }
+      }
+    },
+    "understand": {
+      "understand": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1673873880283
+        }
+      }
+    },
+    "other": {
+      "other": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1673874717026
+        }
+      }
+    },
+    "never": {
+      "never": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1673874909667
+        }
+      }
+    },
+    "appointment": {
+      "appointment": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1673875213608
+        }
+      }
+    },
+    "together": {
+      "together": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1673875252118
+        }
+      }
+    },
+    "future": {
+      "future": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1673875387917
+        }
+      }
+    }
+  }
+}
