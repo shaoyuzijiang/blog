@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "9af2050dd8aff11b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2月研报——考试周之前也没怎么复习的感悟.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Articles/2023-01-新年的第一份月报.md"
+                "file": "2月研报——考试周之前也没怎么复习的感悟.md"
               }
             }
           },
@@ -106,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Articles/2023-01-新年的第一份月报.md",
+                "file": "2月研报——考试周之前也没怎么复习的感悟.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Articles/2023-01-新年的第一份月报.md",
+                "file": "2月研报——考试周之前也没怎么复习的感悟.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,18 +164,19 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "canvas:新建白板": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
-      "canvas:Create new canvas": false,
       "daily-notes:打开/创建今天的日记": false,
       "command-palette:打开命令面板": false,
       "templater-obsidian:Templater": false
     }
   },
-  "active": "658d2c69e26d757b",
+  "active": "9af2050dd8aff11b",
   "lastOpenFiles": [
-    "Articles/Summary of August.md",
     "Articles/2023-01-新年的第一份月报.md",
+    "2月研报——考试周之前也没怎么复习的感悟.md",
+    "Articles/Summary of August.md",
     "English/海外剑10.md",
     "English/Task 2.md",
     "English/Part2.md",
