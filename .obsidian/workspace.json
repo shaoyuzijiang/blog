@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "658d2c69e26d757b",
+            "id": "5cbe80126e02a136",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Articles/2023-01-新年的第一份月报.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9af2050dd8aff11b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2月研报——考试周之前也没怎么复习的感悟.md",
+                "file": "Articles/三月故事.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2月研报——考试周之前也没怎么复习的感悟.md"
+                "file": "Articles/三月故事.md"
               }
             }
           },
@@ -119,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2月研报——考试周之前也没怎么复习的感悟.md",
+                "file": "Articles/三月故事.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2月研报——考试周之前也没怎么复习的感悟.md",
+                "file": "Articles/三月故事.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,11 +159,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9af2050dd8aff11b",
+  "active": "5cbe80126e02a136",
   "lastOpenFiles": [
-    "Articles/2023-01-新年的第一份月报.md",
-    "2月研报——考试周之前也没怎么复习的感悟.md",
     "Articles/Summary of August.md",
+    "Articles/三月故事.md",
+    "Articles/2月研报——考试周之前也没怎么复习的感悟.md",
+    "Articles/2023-01-新年的第一份月报.md",
     "English/海外剑10.md",
     "English/Task 2.md",
     "English/Part2.md",
