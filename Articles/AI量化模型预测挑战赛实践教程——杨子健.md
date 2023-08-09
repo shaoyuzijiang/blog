@@ -3,6 +3,7 @@ Title: AI量化模型预测挑战赛实践教程
 Date now : 2023-08-09 32 WEEK 
 Modification date: 星期三 9日 八月 2023 18:59:51
 ---
+
 ### 提问总结：[我的机器学习之路(学到很多)](https://mp.weixin.qq.com/s/2-V1kFbSzi3Z5UJ7GV_WBw)
 #### 问题：下列哪种方法可以用来缓解过拟合的产生？
 - A.增加更多的特征
@@ -64,14 +65,11 @@ warnings.filterwarnings('ignore')
 train_df = train_df.sort_values(['file','time']) test_df = test_df.sort_values(['file','time']) 
 # 当前时间特征 
 # 围绕买卖价格和买卖量进行构建 
-# 暂时只构建买一卖一和买二卖二相关特征，进行优化时可以加上其余买卖信息 
-
 # 计算买一价和卖一价的加权平均作为新特征'wap1'，加权平均的计算方式是：(买一价 * 买一量 + 卖一价 * 卖一量) / (买一量 + 卖一量)
 train_df['wap1'] = (train_df['n_bid1'] * train_df['n_bsize1'] + train_df['n_ask1'] * train_df['n_asize1']) / (train_df['n_bsize1'] + train_df['n_asize1'])
 # 计算买二价和卖二价的加权平均作为新特征'wap2'，加权平均的计算方式同样是：(买二价 * 买二量 + 卖二价 * 卖二量) / (买二量 + 卖二量)
 train_df['wap2'] = (train_df['n_bid2'] * train_df['n_bsize2'] + train_df['n_ask2'] * train_df['n_asize2']) / (train_df['n_bsize2'] + train_df['n_asize2'])
 # test 同样
-
 # 计算'wap1'和'wap2'之间的差值的绝对值作为新特征'wap_balance'
 train_df['wap_balance'] = abs(train_df['wap1'] - train_df['wap2'])
 # 计算买一价和买二价之间的差值作为新特征'bid_spread'
@@ -103,21 +101,18 @@ def calculate_wap(df, i):
 def feature_engineering(df):
 	for i in range (1,5):
 	    df = calculate_wa(df, i)
-
 		# 历史平移 
 		# 获取历史信息 
 		for val in [f'wap{i}',f'wap{i+1}',f'wap_balance{i}_{i+1}',f'price_spread{i}_{i+1}',
 		f'bid_spread{i}_{i+1}',f'ask_spread{i}_{i+1}',f'total_volume{i}_{i+1}',f'volume_imbalance{i}_{i+1}']:
 			for loc in [1,5,10,20,40,60]: 
 				df[f'file_{val}_shift{loc}'] = df.groupby(['file'])[val].shift(loc)
-
 		# 差分特征 
 		# 获取与历史数据的增长关系 
 		for val in [f'wap{i}',f'wap{i+1}',f'wap_balance{i}_{i+1}',f'price_spread{i}_{i+1}',
 		f'bid_spread{i}_{i+1}',f'ask_spread{i}_{i+1}',f'total_volume{i}_{i+1}',f'volume_imbalance{i}_{i+1}']:
 			for loc in [1,5,10,20,40,60]: 
 				df[f'file_{val}_diff{loc}'] = df.groupby(['file'])[val].diff(loc) 
-
 		# 窗口统计 
 		# 获取历史信息分布变化信息 
 		# 可以尝试更多窗口大小已经统计方式，如min、max、median等 
@@ -128,7 +123,6 @@ def feature_engineering(df):
 			test_df[f'file_{val}_win7_mean'] = test_df.groupby(['file'])[val].transform(lambda x: x.rolling(window=7, min_periods=3).mean()) 
 			test_df[f'file_{val}_win7_std'] = test_df.groupby(['file'])[val].transform(lambda x: x.rolling(window=7, min_periods=3).std())
     return df
-
 train_df = feature_engineering(train_df)
 test_df = feature_engineering(test_df)
 ```
@@ -158,7 +152,6 @@ for col in df.columns:
     # 计算每列缺失值的比例，如果缺失值比例超过总行数的 95%，也将该列添加到 `drop_cols` 列表中
     if df[col].isnull().sum() / df.shape[0] > 0.95:
         drop_cols.append(col)
-
 print('过滤高相关特征...')
 # 定义一个函数用于检测高相关特征
 def correlation(data, threshold):
@@ -365,8 +358,12 @@ _ = !zip -r submit.zip submit/
 
 ### **官方文档**
 [在线版本Baseline与解题思路](https://datawhaler.feishu.cn/docx/EOypdKkujom8THxWkGZc3F4qn8c)
+
 [AI量化模型预测挑战赛:](https://challenge.xfyun.cn/topic/info?type=quantitative-model&ch=ymfk4uU)
+
 [竞赛实践路线分享](https://datawhaler.feishu.cn/docx/EJ2Edl0hXoIWwuxO15CcEj9Wnxn)
+
 [Scikit-Learn保姆教程：](https://mp.weixin.qq.com/s/4NSVh1HniNT4CGakzHxm1w)
+
 [时间序列预测方法总结](https://zhuanlan.zhihu.com/p/67832773)
 
