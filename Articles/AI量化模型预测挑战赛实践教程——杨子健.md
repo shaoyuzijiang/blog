@@ -40,7 +40,8 @@ L1范数是各分量绝对值的和，L2范数是各分量平方和的算术平�
 正则化即对不希望得到的结果施加惩罚，以使优化过程趋于期望目标，从而减少最小化训练误差中过拟合的风险
 L1范数、L2范数都是属于Lp范数常用的正则化项，其中L1倾向于将非零向量分量个数减少，L2倾向于将非零向量分量个数尽量稠密
 ### 基本流程
-![](photo/Pasted%20image%2020230809100405.png)
+![Pasted image 20230809100405.png](https://s2.loli.net/2023/08/09/6etW3rUiPHXCaFc.png)
+![Pasted image 20230809100405.png](https://s2.loli.net/2023/08/09/6etW3rUiPHXCaFc.png)
 ### 导入模块：可尝试使用百度飞桨算力或[本地配置环境](https://datawhaler.feishu.cn/docx/EOypdKkujom8THxWkGZc3F4qn8c#doxcnNetmKRr155mpGfCaGBxRJg)
 ```Python
 import numpy as np
@@ -83,7 +84,7 @@ train_df['total_volume'] = (train_df['n_asize1'] + train_df['n_asize2']) + (trai
 train_df['volume_imbalance'] = abs((train_df['n_asize1'] + train_df['n_asize2']) - (train_df['n_bsize1'] + train_df['n_bsize2']))
 ```
 - 加入三四五信息的版本
-![](photo/Pasted%20image%2020230809130103.png)
+![Pasted image 20230809130103.png](https://s2.loli.net/2023/08/09/JBcfYSGRD1Ky9Ex.png)
 ```python
 def calculate_wap(df, i):
     df[f'wap{i}'] = (df[f'n_bid{i}']*df[f'n_bsize{i}'] + df[f'n_ask{i}']*df[f'n_asize{i}'])/(df[f'n_bsize{i}'] + df[f'n_asize{i}']) 
@@ -138,7 +139,7 @@ test_df = feature_engineering(test_df)
 #### 优化
 提取更多特征：** 在数据挖掘比赛中，**特征**总是最终制胜法宝，去思考什么信息可以帮助我们提高预测精准度，然后将其转化为特征输入到模型。
 对于本次赛题可以从业务角度构建特征，在量化交易方向中，常说的因子与机器学习中的特征基本一致，**趋势因子、收益波动率因子、买卖压力、同成交量衰减、斜率 价差/深度**，可以围绕成交量、买价和卖价进行构建。也可以从时间序列预测角度构建特征，比如**历史平移特征、差分特征、和窗口统计特征**。
-![](photo/Pasted%20image%2020230809130048.png)
+![Pasted image 20230809130048.png](https://s2.loli.net/2023/08/09/BZPwEiysfHD8FCq.png)
 - 类别特征
     - 编码方式 ：自然数编码、独热编码、count编码（替代类别特征）、目标编码  
     - 统计方式：count、nunique（宽度）、ratio（偏好）
@@ -173,7 +174,6 @@ def correlation(data, threshold):
                 col_corr.append(colname)
     return list(set(col_corr))  # 返回包含所有高相关特征的列名的列表
 ```
---- 
 --- 
 ### 模型融合
 - 机器学习模型（XGBoost、LightGBM 、catboost）
@@ -286,7 +286,7 @@ final_test = (lgb_test + xgb_test + cat_test) / 3
 ```
 ### 模型训练与验证(进阶)
 定义cv_model函数，内部可以选择使用lightgbm、xgboost和catboost模型，可以依次跑完这三个模型，然后将三个模型的结果进行取平均进行融合。
-![](photo/Pasted%20image%2020230809125343.png)
+![Pasted image 20230809125343.png](https://s2.loli.net/2023/08/09/73HIgjFlToYcvOS.png)
 另外一种经典融合方式为stacking，stacking是一种分层模型集成框架。以两层为例，第一层由多个基学习器组成，其输入为原始训练集，第二层的模型则是以第一层基学习器的输出作为特征加入训练集进行再训练，从而得到完整的stacking模型。
 - **第一层：（类比cv_model函数）**
 	划分训练数据为K折（5折为例，每次选择其中四份作为训练集，一份作为验证集）；
@@ -331,9 +331,9 @@ def stack_model(oof_1, oof_2, oof_3, predictions_1, predictions_2, predictions_3
 ---
 ### 验证模型
 - 时序验证
-![](photo/Pasted%20image%2020230809131814.png)
+![Pasted image 20230809131814.png](https://s2.loli.net/2023/08/09/Z3BbOnJd2gisMQI.png)
 - 交叉验证
-![](photo/Pasted%20image%2020230809131822.png)
+![Pasted image 20230809131822.png](https://s2.loli.net/2023/08/09/1e9canrY63DPOM5.png)
 
 ### 结果验证
 ```python
