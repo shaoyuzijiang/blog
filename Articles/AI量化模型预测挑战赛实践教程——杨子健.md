@@ -1,6 +1,7 @@
 ---
 title: AI量化模型预测挑战赛实践教程
-date : 2023-08-09 32 WEEK 
+date : 2023-08-09 
+tags: ["树模型"，"特征工程"] 
 excerpt: 第一次参赛
 ---
 
@@ -177,6 +178,7 @@ def correlation(data, threshold):
     - 缺失值不需要填充
 - NN模型 LSTM   CNN    RNN等  
 ### 模型融合
+
 ```Python
 def cv_model(clf, train_x, train_y, test_x, clf_name, seed = 2023):
     folds = 5
@@ -215,17 +217,17 @@ def cv_model(clf, train_x, train_y, test_x, clf_name, seed = 2023):
         if clf_name == "xgb":
             xgb_params = {
               'booster': 'gbtree', 
-              'objective': 'multi:softprob', 指定学习目标， 'multi:softprob'：输出的概率矩阵
+              'objective': 'multi:softprob', #指定学习目标， 'multi:softprob',#输出的概率矩阵
               'num_class':3,
-              'max_depth': 5, 树的最大深度，越大越复杂，可以用来控制过拟合
-              'lambda': 10, L2正则化项
-              'subsample': 0.7,样本采样率，随机选择70%样本作为训练集
-              'colsample_bytree': 0.7,构造每课树时，列采样率（一般是特征采样率）
-              'colsample_bylevel': 0.7,每执行一次分裂，列采样率
-              'eta': 0.35, 学习率，减少权重值，防止过拟合
+              'max_depth': 5, #树的最大深度，越大越复杂，可以用来控制过拟合
+              'lambda': 10, #L2正则化项
+              'subsample': 0.7,#样本采样率，随机选择70%样本作为训练集
+              'colsample_bytree': 0.7,#构造每课树时，列采样率（一般是特征采样率）
+              'colsample_bylevel': 0.7,#每执行一次分裂，列采样率
+              'eta': 0.35, #学习率，减少权重值，防止过拟合
               'tree_method': 'hist',
-              'seed': 520, 随机数种子，用于生成可复制结果
-              'nthread': 16， 用于并行处理
+              'seed': 520, #随机数种子，用于生成可复制结果
+              'nthread': 16， #用于并行处理
               }
             train_matrix = clf.DMatrix(trn_x , label=trn_y)
             valid_matrix = clf.DMatrix(val_x , label=val_y)
