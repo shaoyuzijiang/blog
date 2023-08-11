@@ -60,15 +60,16 @@ warnings.filterwarnings('ignore')
 --- 
 ### 特征工程
 -   在模型基本选定之后，接下来的要做的就是细致的特征工程，模型与特征是相辅相成的，此处我们将模型与特征工程当做一个整体进行处理。对于设计的模型我们希望它可以充分吸收数据并从数据集中自动挖掘出与我们标签相关的信息，从而能更好地对我们的测试数据进行预测，但从目前模型的发展情况来看，暂时还没有哪种模型可以自动化地对数据进行充分的挖掘，因而我们需要通过人为的方式对数据进行处理，包括特征预处理、组合特征的构建、特征的筛选等等，在模型数据处理的弱势区域对其进行帮助，从而使得我们模型可以获得更好的效果。换言之，特征工程就是在帮助模型学习，在模型学习不好的地方或者难以学习的地方，采用特征工程的方式帮助其学习，通过人为筛选、人为构建组合特征让模型原本很难学好的东西可以更加轻易的学习从而拿到更好的效果。在后续的内容中，我们会针对目前在大数据竞赛圈和工业界表格数据问题上最为流行的梯度提升树模型进行探讨，先介绍针对梯度提升树可以采用的通用特征工程方案以及在特定领域的许多业务特征。
+
 ```python
 # 为了保证时间顺序的一致性，故进行排序 
 train_df = train_df.sort_values(['file','time']) test_df = test_df.sort_values(['file','time']) 
-# 当前时间特征 
-# 围绕买卖价格和买卖量进行构建 
+# 当前时间特征 ，围绕买卖价格和买卖量进行构建 
 # 计算买一价和卖一价的加权平均作为新特征'wap1'，加权平均的计算方式是：(买一价 * 买一量 + 卖一价 * 卖一量) / (买一量 + 卖一量)
 train_df['wap1'] = (train_df['n_bid1'] * train_df['n_bsize1'] + train_df['n_ask1'] * train_df['n_asize1']) / (train_df['n_bsize1'] + train_df['n_asize1'])
 # 计算买二价和卖二价的加权平均作为新特征'wap2'，加权平均的计算方式同样是：(买二价 * 买二量 + 卖二价 * 卖二量) / (买二量 + 卖二量)
 train_df['wap2'] = (train_df['n_bid2'] * train_df['n_bsize2'] + train_df['n_ask2'] * train_df['n_asize2']) / (train_df['n_bsize2'] + train_df['n_asize2'])
+
 # test 同样
 # 计算'wap1'和'wap2'之间的差值的绝对值作为新特征'wap_balance'
 train_df['wap_balance'] = abs(train_df['wap1'] - train_df['wap2'])
@@ -367,3 +368,4 @@ _ = !zip -r submit.zip submit/
 
 [时间序列预测方法总结](https://zhuanlan.zhihu.com/p/67832773)
 
+[第二期优化教程](https://lb0rvxxp4f.feishu.cn/docx/Kwy6d00tqoP6nxxoyLTck42snLe)
